@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Tags</title>
+</head>
+<body>
+    <h1>Media Tags in HTML</h1>
+    <h2>Audio Tag</h2>
+    <audio controls>
+        <source src="audiofile.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h2>Video Tag</h2>
+    <video width="320" height="240" controls>
+        <source src="videofile.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <h2>Embed tag</h2>
+    <embed src="file.pdf" type="application/pdf" width="600" height="400">
+    <p>Your browser does not support the embed tag.</p>
+
+    <h2>Object Tag</h2>
+    <object data="file.pdf" type="application/pdf" width="600" height="400">
+        <p>Your browser does not support the object tag.</p>
+
+        <h2>Iframe tag</h2>
+        <iframe src="https://leetcode.com/" width="600" height="400">
+            <p>Your browser does not support iframes.</p>
+        </iframe>
+
+        <h2>Picture Tag</h2>
+        <picture>
+            <source srcset="image.webp" type="image/webp">
+            <source srcset="image.jpg" type="image/jpeg">
+            <img src="image.jpg" alt="Sample Image" width="600" height="400">
+        </picture>
+
+        
+</body>
+</html>

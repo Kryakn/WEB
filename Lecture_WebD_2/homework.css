@@ -1,0 +1,39 @@
+*{
+        margin: 10px , 20px;
+        font-family: cursive;
+}
+th,td{
+        margin: 2%;
+        border: 1px solid black;
+        text-align: center;
+        padding: 10px;
+}
+
+    #Head1{
+        background-color:darkkhaki
+    }
+    .Head{
+
+        background-color: aquamarine;
+    }
+    .Day{
+        background-color:burlywood;
+    }
+    #Break{
+        background-color: lightcoral;
+    }
+    .Sub{
+        background-color: lightgreen;
+    }
+    .Sub1{
+        background-color: lightpink;
+    }
+    #Sub2{
+        background-color: lightyellow;
+    }   
+    #Sub3{
+        background-color:blanchedalmond
+    }
+    .Sub4{
+        background-color:hotpink
+    }

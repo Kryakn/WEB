@@ -1,0 +1,50 @@
+body {
+    background-color: khaki;
+}
+/* hum iski jagah par group selector ka bhi use kr sakte hai */
+#c{
+    text-align: center;
+}
+#a{
+    color:aqua;
+
+    border: 2px solid black;
+}
+#b{
+    margin: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    padding: 10px;
+    color:blue;
+    border: 2px solid black;
+}
+.qualify{
+    color:green;
+   
+}
+.disqualify{
+    color:red;
+   
+}
+.z{
+    border: 2px solid black;
+}
+div div div p{
+    color: purple;
+}
+div section p{
+    color: orange;
+}
+div >p{
+    color: brown;
+}
+button:focus{
+    background-color: aquamarine;
+}
+button:hover{
+    background-color: lightcoral;
+}
+a:visited{
+    color: hotpink;
+}

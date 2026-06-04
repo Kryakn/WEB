@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" cellspacing="0" cellpadding="10"><!--this is an two dimensional table border="1" adds a border to the table, cellspacing="0" removes space between cells, and cellpadding="10" adds padding inside cells -->
+       <caption>Sample Table</caption><hr><!--caption adds a title to the table-->
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>Alice</td>
+            <td>30</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>25</td>
+            <td>Los Angeles</td>
+        </tr>
+        <tr>
+            <td>Charlie</td>
+            <td>35</td>
+            <td>Calafornia</td>
+        </tr>
+    </table>
+    <br>
+    <!--CALL SPAN AND ROW SPAN-->
+    <table border="1" cellspacing="0" cellpadding="10">
+        <caption>Table with Rowspan and Colspan</caption><hr>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Alice</td><!--rowspan="2" makes this cell span two rows-->
+            <td>30</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <!--This row is spanned by the previous cell, so it only has two cells-->
+            <td>31</td>
+            <td>Boston</td>
+        </tr>
+        <tr>
+            <td colspan="2">Bob</td><!--colspan="2" makes this cell span two columns-->
+            <td>Los Angeles</td>
+        </tr>
+    </table>
+    <br>
+    <!--FORMS-->
+    <form action="/submit" method="post"><!--action specifies where to send the form data, method specifies how to send the data-->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" ><br><br><!--input type="text" creates a text input field-->
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Enter your Age" ><br><br><!--input type="number" creates a number input field-->
+        
+        <label for="city">City:</label>
+        <select id="city" name="city"><!--select creates a dropdown menu-->
+            <option value="newyork">New York</option>
+            <option value="losangeles">Los Angeles</option>
+            <option value="california">California</option>
+        </select><br><br>
+        
+        <input type="submit" value="Submit"><!--input type="submit" creates a submit button-->
+</body>
+</html>

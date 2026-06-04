@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usage of CSS</title>
+   
+</head>
+<body>
+    <h1>Usage of CSS</h1>
+    <p>CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML or XML. It allows you to control the layout, colors, fonts, and overall appearance of your web pages. Here are some common ways to use CSS:</p>
+    <h2>1. Inline CSS</h2>
+    <p>Inline CSS is applied directly to an HTML element using the "style" attribute. For example:</p>
+    <p style="color: blue; font-size: 20px;">This is an example of inline CSS.</p>
+    <h2>2. Internal CSS</h2>
+   <!-- <p>Internal CSS is defined within a <style> tag in the head section of the HTML document. For example:</p>
+    <style>
+        .internal-css {
+            color: green;
+            font-size: 18px;
+    }-->
+
+    <p class="internal-css">This is an example of internal CSS.</p>
+    <h2>3. External CSS</h2>
+    <p>External CSS is defined in a separate file with a .css extension and linked to the HTML document using the <link> tag. For example:</p>
+    <link rel="stylesheet" href="styles.css">   
+    <p class="external-css">This is an example of external CSS.</p>
+    <h2>4. CSS Selectors</h2>
+    <p>CSS selectors are used to target specific HTML elements to apply styles. Some common selectors include:</p>
+    <ul>
+        <li>Universal Selector: Targets all elements on the page. Example: * { margin: 0; }</li><br>
+        <li>tag Selector: Targets all elements of a specific type. Example: p { color: red; }</li><br>
+        <li>Group Selector: Targets multiple elements. Example: h1, h2, h3 { font-family: Arial; }</li><br>
+        <li>Element Selector: Targets all elements of a specific type. Example: p { color: red; }</li><br>
+        <li>Class Selector: Targets elements with a specific class attribute. Example: .my-class { font-size: 16px; }</li><br>
+        <li>ID Selector: Targets a single element with a specific id attribute. Example: #my-id { background-color: yellow; }</li><br>
+        <li>Decendent selector: Targets elements that are descendants of a specified element. Example: div p { color: blue; }</li><br>
+        <li>Attribute Selector: Targets elements based on their attributes. Example: input[type="text"] { border: 1px solid black; }</li><br>
+    </ul>
+    <h2>5. CSS Properties</h2>      
+    <p>CSS properties are used to define the styles for the selected elements. Some common properties include:</p>
+    <ul>
+        <li>Color: Sets the text color. Example: color: red;</li><br>
+        <li>Font-size: Sets the size of the text. Example: font-size: 16px;</li><br>
+        <li>Background-color: Sets the background color of an element. Example: background-color: yellow;</li><br>
+        <li>Margin: Sets the space around elements. Example: margin: 10px;</li><br>
+        <li>Padding: Sets the space between the content and the border of an element. Example: padding: 5px;</li><br>
+    </ul>
+    <h2>6.Concept of Classes</h2>
+    <p>In CSS, a class is a reusable style that can be applied to multiple HTML elements. It is defined using a period (.) followed by the class name.<!-- For example:--></p>
+    <!--<style>
+        .my-class {
+            color: purple;
+            font-size: 18px;
+    }-->
+    <p class="my-class">This is an example of a CSS class.</p>
+    <h2>7.CSS units</h2>
+    <p>CSS units are used to specify the size of elements, fonts, and other properties. Some common CSS units include:</p>
+    <ul>
+        <li>Absolute Units: These units are fixed and do not change based on the context. Examples include inches (in), centimeters (cm), millimeters (mm), points (pt), and picas (pc). For example: width: 2in;</li><br>
+        <li>Relative Units: These units are based on the size of the parent element or the root element. Examples include em, rem, and percentage (%). For example: font-size: 1.5em;</li><br>
+        <li>Pixels (px): A fixed unit that represents a specific number of pixels. Example: font-siz<br>e: 16px;</li><br>
+        <li>Em (em): A relative unit that is based on the font size of the parent element. Example: font-size: 1.5em;</li><br>
+        <li>Rem (rem): A relative unit that is based on the font size of the root(HTML) element. Example: font-size: 1.5rem;</li><br>
+        <li>Percentage (%): A relative unit that is based on the size of the parent element. Example: width: 50%;</li><br>
+        <li>Viewport Units: These units are based on the size of the viewport (the visible area of the web page). Examples include vw (viewport width) and vh (viewport height). For example: width: 50vw;</li><br>
+        <li>Viewport Height (vh): A relative unit that is based on the height of the viewport. Example: height: 50vh;</li><br>
+        <li>Viewport Width (vw): A relative unit that is based on the width of the viewport. Example: width: 50vw;</li><br>
+        <li>Viewport Minimum (vmin): A relative unit that is based on the smaller dimension of the viewport. Example: font-size: 2vmin;</li><br>
+        <li>Viewport Maximum (vmax): A relative unit that is based on the larger dimension of the viewport. Example: font-size: 2vmax;</li><br>
+        <li>Ch (ch): A relative unit that is based on the width of the "0" character in the current font. Example: width: 10ch;</li><br>
+        <li>Ex (ex): A relative unit that is based on the height of the "x" character in the current font. Example: font-size: 2ex;</li><br>
+    </ul>
+    <h2>8.CSS Box Model</h2>
+    <p>The CSS box model is a fundamental concept in web design that describes how elements are structured and how they interact with each other. It consists of four main components:</p>
+    <ul>
+        <li>Content: The innermost part of the box that contains the actual content of the element, such as text or images.</li><br>
+        <li>Padding: The space between the content and the border. It can be used to create space around the content within the element.</li><br>
+        <li>Border: The area that surrounds the padding and content. It can be styled with different colors, widths, and styles (e.g., solid, dashed, dotted).</li><br>
+        <li>Margin: The outermost part of the box that creates space between the element and other elements on the page. It can be used to control the spacing between elements.</li><br>
+
+    </ul>
+
+    <h2>Pseudo Class</h2>
+    <p>A pseudo-class is a keyword added to selectors that specifies a special state of the selected elements. It allows you to apply styles to elements based on their state or position in the document. Some common pseudo-classes include:</p>
+    <ul>
+        <li>:hover - Applies styles when the user hovers over an element. Example: a:hover { color: red; }</li><br>
+        <li>:active - Applies styles when an element is being activated (e.g., clicked). Example: button:active { background-color: blue; }</li><br>
+        <li>:focus - Applies styles when an element has focus (e.g., when a user clicks on an input field). Example: input:focus { border-color: green; }</li><br>
+        <li>:nth-child(n) - Applies styles to the nth child of a parent element. Example: li:nth-child(2) { color: orange; }</li><br>
+        <li>:first-child - Applies styles to the first child of a parent element. Example: p:first-child { font-weight: bold; }</li><br>
+        <li>:last-child - Applies styles to the last child of a parent element. Example: p:last-child { font-style: italic; }</li><br>
+        <li>:not(selector) - Applies styles to elements that do not match the specified selector. Example: div:not(.highlight) { background-color: lightgray; }</li><br>
+    </ul>
+
+    <h2>Pseudo Element</h2>
+    <p>A pseudo-element is a keyword added to selectors that allows you to style specific parts
+    of an element. It is used to create and style elements that do not exist in the HTML document. Some common pseudo-elements include:</p>
+    <ul>
+        <li>::before - Inserts content before the content of an element. Example: p::before { content: "Note: "; font-weight: bold; }</li><br>
+        <li>::after - Inserts content after the content of an element. Example: p::after { content: " (end of paragraph)"; font-style: italic; }</li><br>
+        <li>::first-letter - Styles the first letter of an element. Example: p::first-letter { font-size: 200%; color: red; }</li><br>
+        <li>::first-line - Styles the first line of an element. Example: p::first-line { font-weight: bold; }</li><br>
+</body>
+</html>
