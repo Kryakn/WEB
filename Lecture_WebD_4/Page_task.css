@@ -1,0 +1,441 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+
+/* =============================================
+   2. LAYOUT
+   ============================================= */
+
+.layout {
+  display: flex;          /* sidebar + main side by side */
+  min-height: 100vh;
+}
+
+
+/* =============================================
+   3. SIDEBAR
+   ============================================= */
+
+.sidebar {
+  width: 230px;
+  padding: 20px 20px;
+  border-right: 1px solid black;
+
+  /* Stick sidebar while page scrolls */
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  flex-shrink: 0;         /* don't let sidebar shrink */
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  font-family: 'Georgia', serif;
+  margin-bottom: 21px;
+}
+
+/* Each nav link row */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 100px;  
+  cursor: pointer;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: #1a1a1a;
+  margin-bottom: 2px;
+  transition: background 0.15s ease;
+}
+
+.nav-item:hover {
+  background-color: #f2f2f2;
+}
+
+.nav-item.active {
+  font-weight: 600;
+}
+
+.nav-item i {
+  font-size: 20px;
+}
+
+/* Thin horizontal line in sidebar */
+.nav-divider {
+  height: 1px;
+  background-color: black;
+  margin: 14px 0;
+}
+
+.sidebar-note {
+  font-size: 13px;
+  color: #6b6b6b;
+  padding: 6px 12px;
+  font-family: sans-serif;
+}
+
+.sidebar-link {
+  display: block;
+  font-size: 13px;
+  color: #1a8917;          /* Medium green */
+  padding: 4px 12px;
+  font-family: sans-serif;
+}
+
+.sidebar-link:hover {
+  text-decoration: underline;
+}
+
+
+/* =============================================
+   4. MAIN CONTENT AREA
+   ============================================= */
+
+.main {
+  flex: 1;
+  max-width: 740px;
+  padding: 0 32px 60px;
+}
+
+
+/* =============================================
+   5. MEMBER BANNER
+   ============================================= */
+
+.member-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #fafafa;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  font-family: sans-serif;
+  color: #1a1a1a;
+}
+
+.banner-star {
+  color: #f59e0b;           /* amber/gold star */
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.member-banner a {
+  color: #1a8917;
+  font-weight: 600;
+}
+
+.member-banner a:hover {
+  text-decoration: underline;
+}
+
+
+/* =============================================
+   6. TABS  (For you / Featured)
+   ============================================= */
+
+.tabs {
+  display: flex;
+  gap: 24px;
+  border-bottom: 1px solid #e8e8e8;
+  padding-top: 4px;
+  margin-bottom: 0;
+
+  /* Stick tabs below top of viewport while scrolling */
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 10;
+}
+
+.tab {
+  font-size: 15px;
+  font-family: sans-serif;
+  color: #6b6b6b;
+  padding-bottom: 14px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;      /* overlap the tabs border-bottom */
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.tab:hover {
+  color: #1a1a1a;
+}
+
+.tab.active {
+  color: #1a1a1a;
+  border-bottom-color: #1a1a1a;
+  font-weight: 600;
+}
+
+
+/* =============================================
+   7. ARTICLE CARD
+   ============================================= */
+
+.article-card {
+  display: flex;            /* text left, thumbnail right */
+  gap: 16px;
+  padding: 24px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+/* LEFT SIDE — title, subtitle, stats */
+.article-left {
+  flex: 1;                  /* take all remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Author row — avatar + name + date */
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+}
+
+/* Circle avatar */
+.avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  flex-shrink: 0;
+  color: #ffffff;
+}
+
+/* Avatar color variants */
+.avatar-lg     { background-color: #aaaaaa; color: #333333; }
+.avatar-blue   { background-color: #2563eb; font-size: 9px; }
+.avatar-purple { background-color: #7c3aed; }
+
+.author-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.meta-date {
+  font-size: 13px;
+  color: #6b6b6b;
+}
+
+.verified-badge {
+  font-size: 15px;
+  color: #2563eb;
+  vertical-align: -1px;
+}
+
+/* Article heading */
+.article-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 6px;
+  font-family: 'Georgia', serif;
+  color: #1a1a1a;
+}
+
+/* Article subheading */
+.article-subtitle {
+  font-size: 15px;
+  color: #6b6b6b;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  font-family: sans-serif;
+}
+
+/* Footer row: stats + action buttons */
+.article-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Claps / Comments / Reposts */
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: #6b6b6b;
+  font-family: sans-serif;
+}
+
+.stat i {
+  font-size: 16px;
+}
+
+/* Icon buttons (dislike, bookmark, more) */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  padding: 7px;
+  border-radius: 50%;
+  color: #6b6b6b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.icon-btn:hover {
+  background-color: #f2f2f2;
+  color: #1a1a1a;
+}
+
+.icon-btn i {
+  font-size: 18px;
+}
+
+/* Section label — "Because you follow Design" */
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 0 4px;
+  font-size: 13px;
+  color: #6b6b6b;
+  font-family: sans-serif;
+}
+
+.section-label i {
+  font-size: 16px;
+}
+
+.section-label strong {
+  color: #1a1a1a;
+}
+
+
+/* =============================================
+   8. ARTICLE THUMBNAILS
+   ============================================= */
+
+/* Base thumbnail box — all thumbnails share this */
+.article-thumb {
+  width: 112px;
+  height: 112px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Thumbnail 1: LLM dark blue */
+.thumb-llm {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.thumb-llm-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.thumb-tag {
+  color: #a78bfa;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  margin-bottom: 4px;
+}
+
+.thumb-heading {
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.3;
+  font-family: sans-serif;
+  margin-bottom: 6px;
+}
+
+.thumb-icons {
+  color: #a78bfa;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+/* Thumbnail 2: Code dark */
+.thumb-code {
+  background-color: #1a1a1a;
+}
+
+.code-text {
+  font-size: 11px;
+  font-family: 'Courier New', monospace;
+  color: #4ade80;           /* green terminal text */
+  padding: 10px;
+  line-height: 1.7;
+  text-align: left;
+}
+
+/* Thumbnail 3: "It's Over" red */
+.thumb-over {
+  background: linear-gradient(135deg, #dc2626, #991b1b);
+}
+
+.thumb-over-text {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 900;
+  font-family: sans-serif;
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
