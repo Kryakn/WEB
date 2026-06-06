@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color1:#6c63ff;
+    --color2:#2c2c2c;
+    --color3:#e74c3c;
+    --color4:#1abc9c;
+    --color5:#f39c12;
+    --card-bg:white;
+    --text:#333;
+}
+body{
+    background-color: #f0f0f0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height:100vh;
+}
+.card{
+    background-color: #fff;
+    text-align: center;
+    border-radius: 50px;
+    padding: 10px;
+    width: 400px;
+     border: 1px solid aqua;
+     transition: text-decoration 0.3s ease ;
+}
+.card h2{
+    color: var(--text);
+    margin-bottom: 24px;
+    font-size: 20px;
+}
+.palete{
+    display: flex;
+    gap:12px;
+    justify-content: center;
+}
+.swatch{
+    width: 60px;
+    height: 80px;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.card:hover{
+    text-decoration: underline;
+}
+.swatch:hover {
+    transform: translateY(-8px);
+}
+.swatch p{
+    color:white;
+    font-size: 9px;
+    font-weight: bold;
+}
+#s1 { 
+    background-color: var(--color1);
+ }
+#s2 { 
+    background-color: var(--color2);
+ }
+#s3 { 
+    background-color: var(--color3);
+ }
+#s4 { 
+    background-color: var(--color4);
+ }
+#s5 { 
+    background-color: var(--color5);
+ }
