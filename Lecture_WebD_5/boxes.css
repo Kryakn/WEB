@@ -1,0 +1,17 @@
+#flex{
+    border:1px solid black;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    padding: 16px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border: 1px solid black;
+    height: 100vh;
+    padding: 10px;
+    align-items: center;
+
+}
