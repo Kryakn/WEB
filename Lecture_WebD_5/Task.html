@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium</title>
+    <link rel="stylesheet" href="task.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="top">
+        <button class="hamburger"><i class="fa-solid fa-bars"></i></button>
+        <div class="logo">Medium</div>
+        <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="right-nav">
+            <button class="get-app-btn">
+                <i class="fa-solid fa-border-all"></i> Get app
+            </button>
+            <button class="write-btn">
+                <i class="fa-regular fa-pen-to-square"></i> Write
+            </button>
+            <button class="bell-btn">
+                <i class="fa-regular fa-bell"></i>
+            </button>
+            <div class="profile-avatar">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=32&h=32&fit=crop&crop=face" alt="Profile">
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- BANNER -->
+<div class="banner">
+    <i class="fa-solid fa-star" style="color: orange;"></i>
+    Get unlimited access to the best of Medium for less than $1/week.
+    <a href="#">Become a member</a>
+</div>
+
+<!-- PAGE WRAPPER -->
+<div class="page-wrapper">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <nav>
+            <a href="#" class="active">
+                <i class="fa-solid fa-house"></i> Home
+            </a>
+            <a href="#">
+                <i class="fa-regular fa-bookmark"></i> Library
+            </a>
+            <a href="#">
+                <i class="fa-regular fa-user"></i> Profile
+            </a>
+            <a href="#">
+                <i class="fa-regular fa-file-lines"></i> Stories
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-chart-bar"></i> Stats
+            </a>
+        </nav>
+
+        <hr class="sidebar-divider">
+
+        <div class="sidebar-following-section">
+            <a href="#" class="sidebar-following-header">
+                <i class="fa-solid fa-circle-plus"></i>
+                <span>Following</span>
+            </a>
+            <div class="sidebar-hint">Find writers and publications to follow.</div>
+            <a href="#" class="see-list">See suggestions</a>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div class="tabs">
+            <button class="active">For you</button>
+            <button>Featured</button>
+        </div>
+
+        <!-- Article 1 -->
+        <article class="article">
+            <div class="suchna">
+                <div class="publisher">
+                    <div class="publisher-avatar">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=20&h=20&fit=crop&crop=face" alt="Leo Godin">
+                    </div>
+                    Leo Godin · Mar 2
+                </div>
+                <h2>Claude Code is Great</h2>
+                <p>You Just Need to Learn How to Use It</p>
+                <div class="article-stats">
+                    <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                    <span class="stat"><i class="fa-regular fa-hand-point-up"></i> 5.2K</span>
+                    <span class="stat"><i class="fa-regular fa-comment"></i> 150</span>
+                    <span class="stat"><i class="fa-solid fa-retweet"></i> 87</span>
+                    <div class="article-actions">
+                        <button class="icon-btn"><i class="fa-regular fa-thumbs-down"></i></button>
+                        <button class="icon-btn"><i class="fa-regular fa-bookmark"></i></button>
+                        <button class="icon-btn"><i class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="article-thumb">
+                <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=112&h=84&fit=crop" alt="Claude Code">
+            </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="article">
+            <div class="suchna">
+                <div class="publisher">
+                    <div class="dsc-badge">DSC</div>
+                    In Data Science Collective by Marina Wyss · Feb 23
+                </div>
+                <h2>Should You Still Learn to Code in 2026?</h2>
+                <p>The answer isn't as obvious as I used to believe.</p>
+                <div class="article-stats">
+                    <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                    <span class="stat"><i class="fa-regular fa-hand-point-up"></i> 3.6K</span>
+                    <span class="stat"><i class="fa-regular fa-comment"></i> 178</span>
+                    <span class="stat"><i class="fa-solid fa-retweet"></i> 94</span>
+                    <div class="article-actions">
+                        <button class="icon-btn"><i class="fa-regular fa-thumbs-down"></i></button>
+                        <button class="icon-btn"><i class="fa-regular fa-bookmark"></i></button>
+                        <button class="icon-btn"><i class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="article-thumb">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=112&h=84&fit=crop" alt="Coding">
+            </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="article">
+            <div class="suchna">
+                <div class="publisher">
+                    <div class="b-badge">B</div>
+                    In Books Are Our Superpower by Desiree Peralta · Mar 9
+                </div>
+                <h2>"Women Are Basically Reading Porn"</h2>
+                <p>And other misogynistic comments I receive when I say I'm a fiction reader</p>
+                <div class="article-stats">
+                    <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                    <span class="stat"><i class="fa-regular fa-hand-point-up"></i> 6K</span>
+                    <span class="stat"><i class="fa-regular fa-comment"></i> 305</span>
+                    <span class="stat"><i class="fa-solid fa-retweet"></i> 167</span>
+                    <div class="article-actions">
+                        <button class="icon-btn"><i class="fa-regular fa-thumbs-down"></i></button>
+                        <button class="icon-btn"><i class="fa-regular fa-bookmark"></i></button>
+                        <button class="icon-btn"><i class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="article-thumb">
+                <img src="https://images.unsplash.com/photo-1524578271613-d550eacf6090?w=112&h=84&fit=crop" alt="Books">
+            </div>
+        </article>
+    </main>
+
+    <!-- RIGHT PANEL -->
+    <aside class="right-panel">
+        <div class="panel-section">
+            <div class="panel-title">Staff Picks</div>
+            <div class="staff-pick">
+                <div class="pick-item">
+                    <div class="pick-author">
+                        <div class="pick-avatar">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=20&h=20&fit=crop&crop=face" alt="">
+                        </div>
+                        devin bambrick
+                    </div>
+                    <div class="pick-title">Gatori Fishing in America</div>
+                    <div class="pick-date">5d ago</div>
+                </div>
+                <hr class="pick-divider">
+                <div class="pick-item">
+                    <div class="pick-author">
+                        <div class="pick-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=20&h=20&fit=crop&crop=face" alt="">
+                        </div>
+                        John DeVore <i class="fa-solid fa-circle-check" style="color:#1a8917;font-size:11px;"></i>
+                    </div>
+                    <div class="pick-title">Cigarettes are bad. I miss them.</div>
+                    <div class="pick-date"><span class="star-icon"><i class="fa-solid fa-star"></i></span> May 29</div>
+                </div>
+                <hr class="pick-divider">
+                <div class="pick-item">
+                    <div class="pick-author">
+                        <div class="b-badge" style="font-size:9px;">BC</div>
+                        In Bootcamp by Divya Sabade
+                    </div>
+                    <div class="pick-title">I Sat in Engineering Meetings for Two Years Without Understanding What a Branch Was</div>
+                    <div class="pick-date"><span class="star-icon"><i class="fa-solid fa-star"></i></span> 6d ago</div>
+                </div>
+            </div>
+            <a href="#" class="see-list" style="padding-left:0;">See the full list</a>
+        </div>
+        <div class="panel-section">
+            <div class="panel-title">Recommended topics</div>
+            <div class="topics-grid">
+                <button class="topic-pill">Technology</button>
+                <button class="topic-pill">Relationships</button>
+                <button class="topic-pill">Self Improvement</button>
+                <button class="topic-pill">Writing</button>
+                <button class="topic-pill">Machine Learning</button>
+                <button class="topic-pill">Politics</button>
+                <button class="topic-pill">Cryptocurrency</button>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- TASKBAR SPACER -->
+<div class="taskbar-spacer">
+    <div class="battery">
+        <div class="up-caret">
+            <i class="fa-solid fa-caret-up" style="color: white;"></i>
+        </div>
+        <div class="lang" style="color: white;">ENG IN</div>
+        <i class="fa-solid fa-wifi" style="color: white;"></i>
+        <i class="fa-solid fa-volume-high" style="color: white;"></i>
+        <i class="fa-solid fa-battery-full" style="color: whitesmoke;"></i>
+        <div class="clock">
+            <i class="fa-solid fa-clock" style="color: white;"></i>
+            <div class="weather">
+                <i class="fa-solid fa-cloud-sun" style="color: white;"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
