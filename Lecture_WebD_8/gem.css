@@ -1,0 +1,816 @@
+/* ==========================================================================
+   1. GLOBAL RESETS & CORE APP STYLES
+   --------------------------------------------------------------------------
+   App ke basic reset settings aur window size configurations.
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #f4f5f7;
+}
+
+/* ==========================================================================
+   2. TOP NAVIGATION ACTION NAVBAR
+   --------------------------------------------------------------------------
+   Sabse upar ka main header bar jisme logo, file options, premium badge, 
+   presentation aur share buttons shaamil hain.
+   ========================================================================== */
+.app-navbar {
+    height: 56px;
+    background: linear-gradient(90deg, #00c4cc 0%, #7d2ae8 60%, #5400d6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    color: white;
+    flex-shrink: 0;
+    z-index: 100;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Logo icon background container */
+.nav-brand-icon {
+    background: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Text based navigation links (e.g., File, Resize) */
+.nav-text-link {
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.active-edit {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Verticle lines separating tool sections */
+.nav-action-dividers {
+    width: 1px;
+    height: 18px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Icon action buttons (Undo, Redo, etc.) */
+.nav-icon-action-btn, .nav-utility-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-icon-action-btn:hover, .nav-utility-btn:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Badge overlay for new notifications/features */
+.relative-badge-target {
+    position: relative;
+}
+
+.pink-new-badge {
+    position: absolute;
+    top: -2px;
+    right: -6px;
+    background-color: #ff3b30;
+    color: white;
+    font-size: 8px;
+    font-weight: 700;
+    padding: 1px 4px;
+    border-radius: 6px;
+}
+
+.project-title-label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Premium Try buttons and profiles styling */
+.premium-trial-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 200px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.gold-crown-icon {
+    color: #ffbc00;
+}
+
+.user-avatar-wrapper {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Workspace actions */
+.presentation-mode-btn {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.share-workspace-btn {
+    background-color: white;
+    border: none;
+    color: #0e0f12;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   3. SCREEN BODY WORKSPACE LAYOUT
+   --------------------------------------------------------------------------
+   Main inner layout region container (Sidebars + Main Canvas area).
+   ========================================================================== */
+.app-workspace-body {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* ==========================================================================
+   4. LEFT NAVIGATION SIDEBAR
+   --------------------------------------------------------------------------
+   Extreme left bar jo tool categories switch karta hai (Templates, Elements, Uploads).
+   ========================================================================== */
+.app-left-sidebar {
+    width: 72px;
+    height: 100%;
+    background-color: #ffffff;
+    border-right: 1px solid #e3e4e8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8px;
+    flex-shrink: 0;
+    z-index: 50;
+}
+
+.sidebar-category-tab {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: #646b7a;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-bottom: 4px;
+}
+
+.sidebar-category-tab:hover {
+    background-color: #f4f5f7;
+    color: #0e0f12;
+}
+
+.sidebar-category-tab i {
+    font-size: 18px;
+}
+
+.sidebar-category-tab span {
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.active-tab {
+    color: #7d2ae8;
+}
+
+/* Small notification dot on sidebar items */
+.brand-badge-dot {
+    position: relative;
+}
+.brand-badge-dot::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -4px;
+    width: 5px;
+    height: 5px;
+    background-color: #ffbc00;
+    border-radius: 50%;
+}
+
+/* ==========================================================================
+   5. TEMPLATE DRAWER PANEL LAYOUT
+   --------------------------------------------------------------------------
+   MODIFIED: Width increased to 390px to match target sidebar thumbnail columns.
+   ========================================================================== */
+.drawer-options-panel {
+    width: 390px; /* Bada karke 390px kiya target image scale ke anusaar */
+    height: 100%;
+    background-color: #ffffff;
+    border-right: 1px solid #e3e4e8;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex-shrink: 0;
+    z-index: 40;
+}
+
+/* Fixed non-scrollable header controls within drawer */
+.drawer-fixed-header-controls {
+    padding: 16px 16px 12px 16px;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.drawer-search-wrapper {
+    height: 40px;
+    border: 1px solid #ccced6;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    margin-bottom: 12px;
+}
+
+.search-nested-plus-btn {
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    color: #646b7a;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.drawer-input-field {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 13px;
+}
+
+.mic-icon-input {
+    color: #646b7a;
+}
+
+.drawer-action-row {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn-pill {
+    flex: 1;
+    height: 36px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.btn-white {
+    background-color: white;
+    border: 1px solid #ccced6;
+    color: #0e0f12;
+}
+
+.purple-sparkle {
+    color: #7d2ae8;
+}
+
+.btn-purple {
+    background-color: #7d2ae8;
+    border: none;
+    color: white;
+}
+
+/* Panel hide/collapse slider circle handle button */
+.drawer-collapse-handle {
+    position: absolute;
+    top: 50%;
+    right: -12px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: white;
+    border: 1px solid #e3e4e8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #646b7a;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    z-index: 45;
+}
+
+/* ==========================================================================
+   6. THE CHOSEN SCROLL MECHANISM AREA
+   --------------------------------------------------------------------------
+   Drawer panel ke andar scroll hone wala elements and layout cards grid block.
+   ========================================================================== */
+.drawer-master-scroll-container {
+    flex: 1;
+    overflow-y: scroll;
+    padding: 4px 16px 24px 16px;
+}
+
+/* Custom Webkit scrollbar for Assets list panel */
+.drawer-master-scroll-container::-webkit-scrollbar {
+    width: 6px;
+}
+.drawer-master-scroll-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+.drawer-master-scroll-container::-webkit-scrollbar-thumb {
+    background: #ccced6;
+    border-radius: 10px;
+}
+.drawer-master-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #a1a3ab;
+}
+
+.section-headline-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.headline-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0e0f12;
+}
+
+.see-all-bold {
+    font-size: 12px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Asset Cards Grid system structures */
+.two-column-asset-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.margin-bottom-lg {
+    margin-bottom: 24px;
+}
+
+.padding-bottom-md {
+    padding-bottom: 24px;
+}
+
+.asset-card-thumb {
+    height: 105px; /* Sidebar width badhne ke baad thumbnail cards ke aspect ratio ko fix rakhne ke liye */
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    background-color: #e3e4e8;
+    border: 1px solid rgba(0,0,0,0.04);
+}
+
+/* ==========================================================================
+   7. MAIN EDITOR WINDOW CANVAS VIEWPORT
+   --------------------------------------------------------------------------
+   Center area jahan central white design sheet and customization floating controls rehte hain.
+   ========================================================================== */
+.canvas-viewport-workspace {
+    flex: 1;
+    height: 100%;
+    background-color: #eeeef2;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating dynamic text toolbar on selection context */
+.canvas-context-toolbar {
+    height: 40px;
+    width: fit-content;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    padding: 0 6px;
+}
+
+.toolbar-txt-action-btn {
+    background: transparent;
+    border: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0 12px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.border-right-divider {
+    border-right: 1px solid #e3e4e8;
+    border-radius: 0;
+}
+
+.toolbar-color-swatch-preview {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 6px;
+}
+
+.toolbar-icon-option {
+    background: transparent;
+    border: none;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Infinite view wrapper for white artboard canvas positioning */
+.artboard-canvas-scroller {
+    flex: 1;
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 40px 80px 40px;
+}
+
+/* Actual core white work page artboard area */
+.white-canvas-artboard-page {
+    width: 960px;
+    height: 540px;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   VECTOR SHAPES GEOMETRIC SPECIFICATIONS
+   -------------------------------------------------------------------------- */
+.canvas-vector-shape {
+    position: absolute;
+    width: 160px;  
+    height: 160px; 
+}
+
+.shape-circle { border-radius: 50%; }
+.shape-square { border-radius: 0; }
+
+.shape-triangle {
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;  
+    border-right: 80px solid transparent; 
+    border-bottom: 160px solid #ff7f50;
+}
+
+.shape-pentagon {
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.shape-plus {
+    background-color: #000000;
+    clip-path: polygon(35% 0%, 65% 0%, 65% 35%, 100% 35%, 100% 65%, 65% 65%, 65% 100%, 35% 100%, 35% 65%, 0% 65%, 0% 35%, 35% 35%);
+}
+
+.shape-parallelogram {
+    transform: skew(-20deg);
+    width: 190px; 
+    height: 130px;
+}
+
+.shape-arrow {
+    clip-path: polygon(40% 0%, 40% 60%, 10% 60%, 50% 100%, 90% 60%, 60% 60%, 60% 0%);
+    transform: rotate(180deg);
+    width: 140px;
+    height: 160px;
+}
+
+.shape-heart {
+    background-color: #ff3b30;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(50% 15%, 65% 0%, 85% 0%, 100% 15%, 100% 40%, 50% 95%, 0% 40%, 0% 15%, 15% 0%, 35% 0%);
+}
+
+/* --------------------------------------------------------------------------
+   ACTIVE BOUNDING SELECTION BOX
+   -------------------------------------------------------------------------- */
+.active-element-bounding-box {
+    position: absolute;
+    width: 160px; 
+    height: 160px; 
+    border: 1px solid #7d2ae8;
+}
+
+/* Corner drag resize dots controls node */
+.ctrl-handle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border: 1.5px solid #7d2ae8;
+    border-radius: 50%;
+}
+.top-left { top: -4px; left: -4px; }
+.top-right { top: -4px; right: -4px; }
+.bottom-left { bottom: -4px; left: -4px; }
+.bottom-right { bottom: -4px; right: -4px; }
+
+/* Immediate bubble toolbar overlaying active elements selection boxes */
+.active-element-floating-actions-tooltip {
+    position: absolute;
+    top: -46px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 32px;
+    background: #0e0f12;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+    gap: 2px;
+}
+
+.tooltip-action {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 12px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+
+/* Bottom rotate handle circle */
+.element-rotation-axis-handle {
+    position: absolute;
+    bottom: -36px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 24px;
+    background: white;
+    border: 1px solid #ccced6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+}
+
+/* ==========================================================================
+   8. BOTTOM INFORMATION STATUS FOOTER BAR
+   MODIFIED: Padding and heights expanded to match the solid layout of Canva.
+   ========================================================================== */
+.workspace-status-footer-bar {
+    width: 100%;
+    background-color: #ffffff; 
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    z-index: 60;
+}
+
+/* FOOTER TOP ROW: PAGE THUMBNAILS NAVIGATOR */
+.footer-top-navigator-row {
+    width: 100%;
+    border-top: 1px solid #ccced6; 
+    padding: 24px 0; /* Padding badha di gayi hai jisse footer section ki visual height increase ho jaye */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: #eeeef2; 
+}
+
+.page-navigator-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #ffffff;
+    padding: 6px;
+    border-radius: 10px;
+    border: 1px solid #ccced6;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+/* Thumbnails representing mini pages layouts cards map */
+.mini-canvas-thumbnail-card {
+    width: 90px;  
+    height: 54px; 
+    background: #ffffff;
+    border-radius: 6px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.active-thumb-border {
+    border: 2px solid #7d2ae8; 
+}
+
+/* High-visibility mini vector element layout dots matrix container grid mapping */
+.nested-svg-preview-vector-grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px;
+    padding: 6px;
+    align-items: center;
+}
+
+/* Tiny items color dots representation inside navigator thumbnails */
+.dot-p {
+    height: 8px; 
+    width: 8px;
+    border-radius: 1px;
+}
+.dot-1 { background-color: #adff2f; border-radius: 50%; }
+.dot-2 { background-color: #ffd700; }
+.dot-3 { background-color: #ff7f50; }
+.dot-4 { background-color: #0000cd; }
+.dot-5 { background-color: #000000; }
+.dot-6 { background-color: #ba55d3; }
+.dot-7 { background-color: #9370db; }
+.dot-8 { background-color: #ff3b30; }
+
+.page-index-indicator-tag {
+    position: absolute;
+    bottom: 3px;
+    left: 5px;
+    font-size: 11px;
+    font-weight: 800;
+    color: #ffffff;
+    background-color: rgba(14, 15, 18, 0.75);
+    padding: 1px 5px;
+    border-radius: 3px;
+    line-height: 1.2;
+}
+
+.add-blank-canvas-page-action-btn {
+    height: 54px; 
+    padding: 0 16px;
+    background: #eef0f3;
+    border: none;
+    border-radius: 6px;
+    color: #0e0f12;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* FOOTER BOTTOM ROW: UTILITY & ZOOM CONTROLS */
+.footer-bottom-utility-row {
+    height: 48px; /* Target output images ke mutabik utility row ki height thodi aur stable kar di hai */
+    width: 100%;
+    background-color: #ffffff; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-top: 1px solid #e3e5eb;
+}
+
+.footer-left-controls { 
+    display: flex; 
+    gap: 12px; 
+}
+
+.footer-txt-action {
+    background: transparent;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4f5666;
+    padding: 0 8px;
+    height: 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.footer-right-view-zoom-controls { 
+    display: flex; 
+    align-items: center; 
+    gap: 16px; 
+}
+
+.slider-zoom-wrapper { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.zoom-range-slider {
+    width: 140px; 
+    accent-color: #8b3dff; 
+    height: 5px;
+    background: #e3e5eb;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.zoom-percentage-text { 
+    font-size: 13px; 
+    font-weight: 600; 
+    color: #4f5666; 
+    min-width: 36px; 
+}
+
+.active-view-btn {
+    background: #e3e5eb !important;
+    color: #0e0f12 !important;
+    padding: 6px 12px !important;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.footer-icon-view-action {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    color: #4f5666;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.page-count-display-text { 
+    font-size: 13px; 
+    color: #4f5666; 
+    font-weight: 500; 
+}
