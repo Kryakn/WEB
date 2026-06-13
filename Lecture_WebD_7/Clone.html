@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Clone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+   
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a class="nav-link" href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9 13c0-1.657 1-3 3-3s3 1.343 3 3v3a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-3Zm4.5 0v3a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-3c0-.535.16-.895.353-1.105.175-.19.502-.395 1.147-.395s.972.205 1.147.395c.193.21.353.57.353 1.105Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M3 12.245a5 5 0 0 1 1.678-3.737l4.665-4.146a4 4 0 0 1 5.315 0l4.664 4.146A5 5 0 0 1 21 12.245V17a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-4.755Zm16.5 0V17a2.5 2.5 0 0 1-2.5 2.5H7A2.5 2.5 0 0 1 4.5 17v-4.755A3.5 3.5 0 0 1 5.675 9.63l4.664-4.146a2.5 2.5 0 0 1 3.322 0l4.664 4.146a3.5 3.5 0 0 1 1.175 2.616Z" fill="currentColor"></path></svg></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">File</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Resize</a>
+        </li>
+        <li class="nav-item" style="display: flex; align-items: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m6.1 17.8.73.73 1.3-.49a4.5 4.5 0 0 0 1.48-.91L7.5 15.01c-.4.43-.7.94-.91 1.48L6.1 17.8zm2.46-3.85 2.12 2.12 7.39-7.4-2.12-2.11-7.4 7.4zM17 5.5l2.12 2.12.83-.83a1.5 1.5 0 0 0-2.12-2.12L17 5.5zm4.01-1.9a3 3 0 0 1 0 4.25L10.8 18.07a6 6 0 0 1-2.14 1.38l-4 1.49a.75.75 0 0 1-.97-.97l1.5-4a6 6 0 0 1 1.37-2.15L16.78 3.61a3 3 0 0 1 4.24 0z"></path></svg>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Editing</a>
+        </li>
+
+        <li class="divider"></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m6.05 7.25 2.22-2.22A.75.75 0 0 0 7.2 3.97L4.43 6.75c-.69.68-.69 1.8 0 2.48l2.83 2.83A.75.75 0 0 0 8.32 11L6.07 8.75H16a4.25 4.25 0 1 1 0 8.5h-4a.75.75 0 1 0 0 1.5h4a5.75 5.75 0 0 0 0-11.5H6.05z"></path></svg>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="m18.054 7.252-2.296-2.296a.75.75 0 0 1 1.06-1.06l2.83 2.828a1.75 1.75 0 0 1 0 2.475l-2.832 2.831a.75.75 0 0 1-1.06-1.06l2.219-2.22H8a4.25 4.25 0 0 0 0 8.5h4a.75.75 0 0 1 0 1.5H8a5.75 5.75 0 0 1 0-11.5h10c.018 0 .036 0 .054.002Z"></path></svg>
+          </a>
+        </li>
+        <li class="divider"></li>
+
+        <li class="nav-item">
+            <a class="nav-link href="#">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 3a6 6 0 0 0-5.99 5.661A5.627 5.627 0 0 0 7 19.5v.001h10v-.001a5.625 5.625 0 0 0 2.67-10.506l-1.114 1.114a4.126 4.126 0 0 1-1.806 7.891V18h-9.5v-.002a4.125 4.125 0 0 1-.681-8.21 4.5 4.5 0 0 1 8.549-2.606l1.116-1.117A5.998 5.998 0 0 0 11 3Zm7.631 4.91a.75.75 0 1 0-1.053-1.068L10.67 13.75l-1.93-1.93a.75.75 0 1 0-1.088 1.03l-.001.002 2.444 2.445a.748.748 0 0 0 1.11.037v.001l7.425-7.424Z" fill="currentColor"></path></svg>
+            </a>
+        </li>
+        
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+      <div class="right-section">
+
+    <span class="project-name">
+        Sample
+    </span>
+
+    <button class="trial-btn">
+        Start your trial for ₹0
+    </button>
+
+    <i class="fa-solid fa-circle-user profile-icon"></i>
+
+    <button class="icon-btn"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M17.75 18h3.5a.75.75 0 1 1 0 1.5H2.75a.75.75 0 1 1 0-1.5h3.5v-6.25a.75.75 0 1 1 1.5 0V18h3.5V3.75a.75.75 0 1 1 1.5 0V18h3.5V7.75a.75.75 0 1 1 1.5 0V18z"></path></svg> </button>
+
+    <button class="icon-btn"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.25 11.25A7.75 7.75 0 0 1 10 3.5h4a7.75 7.75 0 0 1 .063 15.5l-.084.04a4 4 0 0 0-.438.29c-.358.263-.782.624-1.198.996-.414.37-.805.74-1.097 1.018l-.146.14-.206.196a5.317 5.317 0 0 1-.18.16l-.001.001c-.009.007-.055.043-.118.075l-.002.001a.756.756 0 0 1-.875-.137.75.75 0 0 1-.22-.53v-2.266A7.75 7.75 0 0 1 2.25 11.25zm8.748 8.27c.112-.102.227-.206.344-.31.428-.384.894-.782 1.31-1.088.207-.153.417-.294.614-.4.166-.09.438-.222.734-.222A6.25 6.25 0 1 0 14 5h-4a6.25 6.25 0 1 0 0 12.5h.998v2.02z" fill="currentColor"></path></svg> </button>
+
+    <button class="present-btn">
+        Present
+    </button>
+
+    <button class="share-btn">
+        Share
+    </button>
+
+</div>
+    </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+
+<div class="main-layout">
+
+    <aside class="left-sidebar">
+
+    <div class="tool-item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 11.325c0-3.59 0-5.385.966-6.61a4.5 4.5 0 0 1 .748-.749C5.94 3 7.734 3 11.325 3h1.35c3.59 0 5.386 0 6.61.966.279.22.53.47.749.748C21 5.94 21 7.734 21 11.325v1.35c0 3.59 0 5.386-.966 6.61-.22.279-.47.53-.748.749-1.226.966-3.02.966-6.611.966h-1.35c-3.59 0-5.385 0-6.61-.966a4.497 4.497 0 0 1-.749-.748C3 18.06 3 16.266 3 12.675v-1.35ZM11.325 4.5H13.5v15h-2.175c-1.83 0-3.076-.002-4.021-.111-.914-.105-1.356-.293-1.661-.533a3.004 3.004 0 0 1-.499-.499c-.24-.305-.428-.747-.533-1.661-.109-.945-.111-2.19-.111-4.021v-1.35c0-1.83.002-3.076.11-4.021.106-.914.293-1.356.534-1.661a3 3 0 0 1 .499-.499c.305-.24.747-.428 1.661-.533.945-.109 2.19-.111 4.021-.111ZM15 19.486c.666-.014 1.22-.042 1.696-.097.914-.105 1.356-.293 1.661-.533.186-.146.353-.314.499-.499.24-.305.428-.747.533-1.661.109-.945.111-2.19.111-4.021v-1.657H15v8.468Zm4.494-9.968c-.01-.904-.037-1.619-.105-2.214-.105-.914-.293-1.356-.533-1.661a3.004 3.004 0 0 0-.499-.499c-.305-.24-.747-.428-1.661-.533A18.58 18.58 0 0 0 15 4.514v5.004h4.494Z" fill="currentColor"></path></svg>
+        <span>Templates</span>
+    </div>
+
+    <div class="tool-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill="currentColor" d="M10.563 12.53a.35.35 0 0 1 .421.343v1.817h.004v3.61h-.004v.045q.006.037.003.075c-.036.523-.273.902-.615 1.139-.328.226-.726.304-1.079.296a1.346 1.346 0 0 1-.41-2.623l.225-.05a.5.5 0 0 0 .392-.488v-1.13l-3.677.783v3.013H5.82v.158c-.037.523-.228.91-.57 1.146-.328.226-.726.305-1.08.297a1.345 1.345 0 0 1-.41-2.623l.172-.037a.5.5 0 0 0 .394-.489V14.31c0-.248.173-.463.415-.515l.642-.139a.4.4 0 0 1 .061-.018zm6.085.005a4.213 4.213 0 1 1 0 8.426 4.213 4.213 0 0 1 0-8.426m-3.59-7.938a1.65 1.65 0 0 1 2.478-1.427l4.208 2.443.1.063a1.65 1.65 0 0 1 0 2.728l-.1.063-4.208 2.443a1.65 1.65 0 0 1-2.478-1.427zM9.13 3.062a2.694 2.694 0 0 1 2.294 4.107c-.603 1.19-1.564 2.12-2.341 2.742a12 12 0 0 1-1.34.927l-.09.052-.027.014-.008.004-.002.002a.76.76 0 0 1-.712.001h-.002l-.003-.002-.007-.005-.027-.014-.094-.053a11.855 11.855 0 0 1-1.37-.947c-.792-.637-1.77-1.594-2.364-2.816A2.694 2.694 0 0 1 7.26 3.818a2.69 2.69 0 0 1 1.87-.756"></path></svg>
+        <span>Elements</span>
+    </div>
+
+    <div class="tool-item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 6.497a.5.5 0 0 0-.5.5v.79a1.25 1.25 0 0 1-2.5 0v-1.79a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2V7.76a1.25 1.25 0 0 1-2.5 0v-.763a.5.5 0 0 0-.5-.5h-3.75v11.049a.5.5 0 0 0 .5.5h1.27a1.25 1.25 0 0 1 0 2.5H8.98a1.25 1.25 0 1 1 0-2.5h1.27a.5.5 0 0 0 .5-.5V6.497H7Z" fill="currentColor"></path></svg>
+        <span>Text</span>
+    </div>
+
+    <div class="tool-item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m9.096 5.927 1.546-1.297a2.501 2.501 0 0 1 2.797-.284l.142-.051a5.494 5.494 0 0 1 1.723-.331 4 4 0 0 0-5.627-.483L4.975 7.427l4.12-1.5Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M11.835 15.455a2.697 2.697 0 1 1 5.395 0 2.697 2.697 0 0 1-5.395 0Zm2.698-1.448a1.447 1.447 0 1 0 0 2.895 1.447 1.447 0 0 0 0-2.895Z" fill="currentColor"></path><path d="M8.02 15.455a1.447 1.447 0 0 1 2.311-1.162.625.625 0 1 0 .747-1.002 2.697 2.697 0 1 0-.016 4.34.625.625 0 0 0-.74-1.008 1.447 1.447 0 0 1-2.302-1.168Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M7 9.455a4 4 0 0 0-4 4v4a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4v-4a4 4 0 0 0-4-4H7Zm10 1.5H7a2.5 2.5 0 0 0-2.5 2.5v4a2.5 2.5 0 0 0 2.5 2.5h10a2.5 2.5 0 0 0 2.5-2.5v-4a2.5 2.5 0 0 0-2.5-2.5Z" fill="currentColor"></path><path d="m14.607 7.114-2.31.84H7.91l6.183-2.25a4 4 0 0 1 5.127 2.391l.143.392a5.465 5.465 0 0 0-1.892-.512 2.501 2.501 0 0 0-2.865-.861Z" fill="currentColor"></path></svg>
+        <span>Brand</span>
+    </div>
+
+    <div class="tool-item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.24 2.985c-2.735 0-5.04 2.075-5.316 4.788a.199.199 0 0 1-.123.162 5.729 5.729 0 0 0 1.994 11.097 5.727 5.727 0 0 0 5.727-5.727v-.486l1.782 1.782a.75.75 0 0 0 1.06-1.06l-3.062-3.063a.75.75 0 0 0-1.06 0L9.179 13.54a.75.75 0 0 0 1.06 1.06l1.783-1.781v.486A4.227 4.227 0 1 1 6.324 9.34a1.698 1.698 0 0 0 1.092-1.416c.198-1.943 1.855-3.44 3.825-3.44a3.848 3.848 0 0 1 3.785 3.174c.135.764.78 1.366 1.563 1.43 2.146.178 3.855 2.016 3.855 4.216a4.226 4.226 0 0 1-4.227 4.227h-1.914a.75.75 0 0 0 0 1.5h1.914a5.727 5.727 0 0 0 5.727-5.727c0-2.978-2.305-5.468-5.231-5.71a.25.25 0 0 1-.21-.196 5.348 5.348 0 0 0-5.262-4.414Z" fill="currentColor"></path></svg>
+        <span>Uploads</span>
+    </div>
+
+    <div class="tool-item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M20.07 3.456a3.135 3.135 0 0 0-4.434 0L10.25 8.843a3.38 3.38 0 0 0-.884 1.55l-.845 3.292c-.205.8.522 1.527 1.322 1.323l3.278-.837a3.384 3.384 0 0 0 1.555-.886L20.07 7.89a3.135 3.135 0 0 0 0-4.434Zm-2.117 4.43 1.057-1.057a1.635 1.635 0 0 0-2.313-2.313l-1.056 1.057 2.312 2.312Zm-1.166 1.166-3.172 3.172c-.24.24-.539.41-.866.493l-2.602.665.67-2.616a1.88 1.88 0 0 1 .492-.862l3.165-3.164 2.313 2.312Z" fill="currentColor"></path><path d="M5.144 15.022a.641.641 0 1 0 0 1.282h13.751a2.109 2.109 0 0 1 0 4.218H9.194a.75.75 0 0 1 0-1.5h9.701a.609.609 0 1 0 0-1.218H5.144a2.141 2.141 0 0 1 0-4.282h1.862v1.5H5.144Z" fill="currentColor"></path></svg>
+        <span>Tools</span>
+    </div>
+
+    <div class="tool-item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.845 2.942H7.03a4 4 0 0 0-4 3.994l-.017 10a4 4 0 0 0 4 4.006h9.993a4 4 0 0 0 4-4v-8.23a3 3 0 0 0-3-3h-3.614a.5.5 0 0 1-.447-.277l-.417-.834a3 3 0 0 0-2.683-1.659Zm-3.815 1.5h3.815a1.5 1.5 0 0 1 1.341.83l.417.834a2 2 0 0 0 1.79 1.106h3.613a1.5 1.5 0 0 1 1.5 1.5v.735H4.526l.004-2.509a2.5 2.5 0 0 1 2.5-2.495Zm-2.507 6.505-.01 5.991a2.5 2.5 0 0 0 2.5 2.505h9.993a2.5 2.5 0 0 0 2.5-2.5v-5.996H4.523Z" fill="currentColor"></path></svg>
+        <span>Projects</span>
+    </div>
+
+    <div class="tool-item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.57 3.363c-1.415 0-2.564 1.159-2.564 2.588v2.824c0 1.429 1.149 2.588 2.565 2.588h2.798c1.416 0 2.564-1.159 2.564-2.588V5.95c0-1.43-1.148-2.588-2.564-2.588H5.57Zm0 1.5c-.574 0-1.064.474-1.064 1.088v2.824c0 .614.49 1.088 1.065 1.088h2.798c.575 0 1.064-.474 1.064-1.088V5.95c0-.614-.49-1.088-1.064-1.088H5.57ZM15.576 3.363c-1.416 0-2.564 1.159-2.564 2.588v2.824c0 1.429 1.148 2.588 2.564 2.588h2.798c1.416 0 2.565-1.159 2.565-2.588V5.95c0-1.43-1.149-2.588-2.565-2.588h-2.798Zm0 1.5c-.575 0-1.064.474-1.064 1.088v2.824c0 .614.49 1.088 1.064 1.088h2.798c.575 0 1.065-.474 1.065-1.088V5.95c0-.614-.49-1.088-1.065-1.088h-2.798ZM5.57 13.383c-1.415 0-2.564 1.159-2.564 2.588v2.824c0 1.43 1.149 2.588 2.565 2.588h2.798c1.416 0 2.564-1.159 2.564-2.588V15.97c0-1.429-1.148-2.588-2.564-2.588H5.57Zm-1.064 2.588c0-.614.49-1.088 1.065-1.088h2.798c.575 0 1.064.474 1.064 1.088v2.824c0 .614-.49 1.088-1.064 1.088H5.57a1.077 1.077 0 0 1-1.065-1.088V15.97Z" fill="currentColor"></path><path d="M16.975 13.414a.75.75 0 0 1 .75.75v2.47h2.469a.75.75 0 1 1 0 1.5h-2.469v2.468a.75.75 0 0 1-1.5 0v-2.469h-2.469a.75.75 0 0 1 0-1.5h2.47v-2.469a.75.75 0 0 1 .75-.75Z" fill="currentColor"></path></svg>
+        <span>Apps</span>
+    </div>
+
+</aside>
+
+<section class="content-panel">
+    <h5>Design</h5>
+
+    <div class="search-box">
+        <button class="plus-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12.75 11.25V5a.75.75 0 1 0-1.5 0v6.25H5a.75.75 0 1 0 0 1.5h6.25V19a.75.75 0 1 0 1.5 0v-6.25H19a.75.75 0 1 0 0-1.5h-6.25z"></path></svg>
+        </button>
+        <input type="text" placeholder="Search Keywords, Tags, Colors">
+    </div>
+
+    <div class="action-buttons">
+
+        <button class="generate-btn">
+            Generate
+        </button>
+
+        <button class="search-btn">
+            Search
+        </button>
+
+    </div>
+
+    <div class="recent-row">
+       <h6>Recently used</h6>
+       <a href="#">See all</a>
+    </div>
+
+    <h6 class="results-title">
+       All results
+    </h6>
+
+    <div class="template-grid">
+
+       <div class="template-card"></div>
+
+       <div class="template-card"></div>
+
+       <div class="template-card"></div>
+
+       <div class="template-card"></div>
+
+    </div>
+
+</section>
+
+    <main class="canvas-area">
+        <div class="canvas-wrapper">
+            <div class="canvas-page">
+
+            </div>
+        </div>
+    </main>
+
+</div>
+
+</body>
+</html>
